@@ -59,6 +59,23 @@ public class StringTest {
     /**
      * 2. 널 문자로 끝나는 문자열을 뒤집는 reverse(char str) 함수를 구현하라.
      */
+    public String reverse(String str) {
+        if(str.length() <= 0) return null;
+
+        String reverseStr = "";
+
+        for(int i=str.length()-1; i >= 0; i--) {
+            reverseStr += str.charAt(i);
+        }
+        return reverseStr;
+    }
+
+    public static String reverseString2(String string) {
+        char[] charArray = new char[string.length()];
+        for(int i=0; i<charArray.length; i++)
+            charArray[i] = string.charAt(string.length()-i-1);
+        return new String(charArray);
+    }
 
     /**
      *  3. 주어진 문자열 내의 모든 공백을 '%20'으로 바꾸는 메서드를 작성하라. 문자열 끝에 추가로 필요한 문자들을 더할 수 있는 충분한 공간이 있다고 가정하라. 그리고 공백을 포함하는 문자열의 길이도 함께 주어진다고 가정하라

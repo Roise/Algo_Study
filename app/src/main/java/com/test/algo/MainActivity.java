@@ -35,5 +35,6 @@ public class MainActivity extends AppCompatActivity {
 
         StringTest stringTest = new StringTest();
         Log.e("JUN", "STRING TEST = " + stringTest.isUniqueCharBit("hi BYE B"));
+        Log.e("JUN", "STRING REVERSE = " + stringTest.reverse("hi hyung jun"));
     }
 }
